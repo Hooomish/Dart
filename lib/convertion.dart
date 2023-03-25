@@ -26,12 +26,12 @@ class Convertion {
     return map;
   }
 
-  static Set<int?> convertListOfWordsToNumbers(List<String> words) {
-    var setOfNumbers = <int?>{};
+  static Set<int> convertListOfWordsToNumbers(List<String> words) {
+    var setOfNumbers = <int>{};
 
     for(var word in words){
       if (_numbers.containsKey(word)){
-        setOfNumbers.add(_numbers[word]);
+        setOfNumbers.add(_numbers[word]!);
       }
     }
 

@@ -1,17 +1,18 @@
 //3
 class WorkingWithString{
 
-  static List<int> getListOfNumberFromString(String str) {
-    List<int> listOfInteger = [];
+  static List<num> getListOfNumberFromString(String str) {
+    List<String> listOfString = str.split(" ");
+    List<num> listOfNumber = [];
 
-    for(var i = 0; i < str.length; i++){     
-      var value = int.tryParse(str[i]);
+    for(var i = 0; i < listOfString.length; i++){     
+      var value = num.tryParse(listOfString[i]);
 
-      if (value is int){
-        listOfInteger.add(value);
+      if (value is num){
+        listOfNumber.add(value);
       }
     }
 
-    return listOfInteger;
+    return listOfNumber;
   }
 }
